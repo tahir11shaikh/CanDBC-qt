@@ -1,5 +1,29 @@
-CAN DBC is library generation for QT-C++ based applications including 
-decoding and parsing as per standard .dbc file format.
+# CanDBC-qt 🚗
+**A High-Performance, Plug & Play CAN DBC Parser for Qt/C++**
+
+`CanDBC-qt` is a lightweight static library designed to bridge the gap between raw CAN bus data and physical signal values. It parses standard `.dbc` files and provides real-time decoding for embedded Qt applications.
+
+## 🚀 Key Features
+* **Qt Native:** Built on `QString`, `QByteArray`, and `QList` for seamless integration.
+* **Zero Dependencies:** No external third-party parsing tools required.
+* **ABI Stable:** Uses Pimpl idiom to ensure library updates don't break your build.
+* **Real-Time Ready:** Optimized for high-frequency decoding loops.
+
+## 📦 Installation & Integration
+This library is distributed as a static binary (`.a`) and a single header (`.h`).
+
+### Step 1: Add files to your project
+Copy `CanDBC.h` and `libCanDBC.a` (or `.lib` on Windows) to your project folder (e.g., inside a `/libs` directory).
+
+### Step 2: Configure .pro (qmake)
+Add the library to your `.pro` file:
+
+```qmake
+# Include the header path
+INCLUDEPATH += $$PWD/libs
+
+# Link the static library
+LIBS += -L$$PWD/libs -lCanDBC
 
 For .a/.lib build generation,
 please contact : tahir11shaikh@gmail.com 
