@@ -25,14 +25,14 @@ INCLUDEPATH += $$PWD/libs
 # Link the static library
 LIBS += -L$$PWD/libs -lCanDBC
 
-Step 3: CMake (Optional)
+### Step 3: CMake (Optional)
 If you use CMake:
 add_library(CanDBC STATIC IMPORTED)
 set_target_properties(CanDBC PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/libs/libCanDBC.a")
 target_link_libraries(YourApp PRIVATE CanDBC)
 
 
-📜 License & Support
+###📜 License & Support
 This library is currently closed-source but free for evaluation. For .a/.lib build generation.
 Author: Tahir Shaikh
 Contact: tahir11shaikh@gmail.com OR https://www.linkedin.com/in/tahir-shaikh-70083845/
