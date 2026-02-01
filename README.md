@@ -32,7 +32,7 @@ set_target_properties(CanDBC PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/l
 target_link_libraries(YourApp PRIVATE CanDBC)
 
 
-###📜 License & Support
+## 📜 License & Support
 This library is currently closed-source but free for evaluation. For .a/.lib build generation.
 Author: Tahir Shaikh
 Contact: tahir11shaikh@gmail.com OR https://www.linkedin.com/in/tahir-shaikh-70083845/
