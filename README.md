@@ -18,21 +18,16 @@ Copy `CanDBC.h` and `libCanDBC.a` (or `.lib` on Windows) to your project folder 
 ### Step 2: Configure .pro (qmake)
 Add the library to your `.pro` file:
 
-```qmake
 # Include the header path
 INCLUDEPATH += $$PWD/libs
 
 # Link the static library
 LIBS += -L$$PWD/libs -lCanDBC
-```qmake
 
-### Step 3: CMake (Optional)
-If you use CMake:
-```qmake
+### Step 3: CMake
 add_library(CanDBC STATIC IMPORTED)
 set_target_properties(CanDBC PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/libs/libCanDBC.a")
 target_link_libraries(YourApp PRIVATE CanDBC)
-```qmake
 
 ## 📜 License & Support
 This library is currently closed-source but free for evaluation. Please contact me for .a / .lib build generation.
